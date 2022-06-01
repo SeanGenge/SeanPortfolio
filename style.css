@@ -1,6 +1,8 @@
 :root {
-    --title-border-colour: #0096FF;
+    --title-border-colour:#0F52BA;
     --project-primary-colour: #6495ED;
+    --project-blueGray-colour: #7393B3;
+    --project-grey-colour: 	#202020;
     --project-showcase-height: 350px;
     
     --project-title-height: 55px;
@@ -9,15 +11,24 @@
     --project-title-bottom-margin: 15px;
 }
 
-/* Header styling */
+/* ----------------------------------------------------- Header styling ----------------------------------------------------- */
 .header {
     max-height: 20%;
-    border: 1px solid red;
     overflow: hidden;
+    background: var(--project-grey-colour);
 }
 
 .header-name {
+    font-size: 32px;
+    position: relative;
+    top: 10px;
     display: inline-block;
+    margin: 5px 25px 5px 0;
+    padding: 15px 25px;
+    background-color: var(--project-blueGray-colour);
+    color: var(--project-grey-colour);
+    font-weight: bolder;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
 }
 
 .header-menu {
@@ -29,7 +40,7 @@
 .header-menu li {
     display: inline-block;
     border-bottom: 3px solid lightblue;
-    width: 80px;
+    width: 100px;
     padding: 5px;
     margin: 10px 15px;
     text-align: center;
@@ -37,10 +48,18 @@
 }
 
 .header-menu li a {
+    font-size: 16px;
+    color: lightblue;
     text-decoration: none;
 }
 
-/* Main content styling */
+/* ----------------------------------------------------- Subtitle styling ----------------------------------------------------- */
+.subtitle {
+    margin: 0 auto;
+    width: 225px;
+}
+
+/* ----------------------------------------------------- Main content styling ----------------------------------------------------- */
 .container {
     width: 75%;
     margin: 30px auto;
@@ -62,13 +81,14 @@
     padding-right: 15px;
     margin-right: 15px;
     border-right: 5px solid var(--title-border-colour);
+    color: var(--title-border-colour);
 }
 
 .contents {
     flex: 1 0 85%;
 }
 
-/* Project specific styling */
+/* ----------------------------------------------------- Project specific styling ----------------------------------------------------- */
 .projects {
     display: flex;
     flex-wrap: wrap;
@@ -130,7 +150,7 @@
     border: 5px solid var(--project-primary-colour);
 }
 
-/* Contact me specific styling */
+/* ----------------------------------------------------- Contact me specific styling ----------------------------------------------------- */
 #contact-me-section {
     list-style: none;
     margin: 25px 50px;
@@ -144,12 +164,18 @@
 #contact-me-section li a {
     text-decoration: none;
     border-bottom: 3px solid var(--title-border-colour);
+    color: var(--title-border-colour);
+    font-size: 18px;
 }
 
-/* mobile and styling */
+/* ----------------------------------------------------- mobile and styling ----------------------------------------------------- */
 @media screen and (max-width: 650px) {
     .project-showcase img, .project-item img {
         width: auto;
+    }
+    
+    #contact-me-section li a {
+        border-bottom: none;
     }
 }
 

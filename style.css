@@ -2,9 +2,11 @@
     --title-border-colour: #0096FF;
     --project-primary-colour: #6495ED;
     --project-showcase-height: 350px;
-    --project-title-bottom-margin: 15px;
+    
     --project-title-height: 55px;
-    --project-title-padding: 15px;
+    --project-title-padding: 10px;
+    /* the spacing you want from the title to the bottom of the project tile */
+    --project-title-bottom-margin: 15px;
 }
 
 /* Header styling */
@@ -75,10 +77,16 @@
 .project-title {
     position: absolute;
     height: var(--project-title-height);
-    width: 170px;
-    top: calc(var(--project-showcase-height) - var(--project-title-height) - (var(--project-title-padding) * 2) - var(--project-title-bottom-margin));
+    /* 
+        Place the item at the very bottom of the project tile,
+        Subtract the title height and the padding * 2 for top and bottom,
+        Subtract the bottom margin (This is the spacing you want from the bottom of the tile to the title)
+        
+        Since this is using 100% at the start, this will work for all sizes
+    */
+    top: calc(100% - var(--project-title-height) - (var(--project-title-padding) * 2) - var(--project-title-bottom-margin));
     background-color: var(--project-primary-colour);
-    font-size: 32px;
+    font-size: 24px;
     text-align: center;
     padding: var(--project-title-padding) var(--project-title-padding) var(--project-title-padding) 0;
     border-left: 10px solid var(--project-primary-colour);
